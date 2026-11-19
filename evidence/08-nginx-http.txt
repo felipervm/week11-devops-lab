@@ -1,0 +1,15 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 08-nginx-http
+Executed: 2026-11-19 11:32:09 -05:00
+
+PS> minikube -p week11-lab service nginx-nodeport --url
+(Tunnel kept running in a separate process while testing the URL.)
+http://127.0.0.1:63761
+PS> curl.exe --fail --silent http://127.0.0.1:63761 | Select-String '<title>|<h1>'
+
+<title>Welcome to nginx!</title>
+<h1>Welcome to nginx!</h1>
+PS> curl.exe --silent --output NUL --write-out "HTTP %{http_code}" <service URL>
+HTTP 200
+
+
+Command sequence completed.

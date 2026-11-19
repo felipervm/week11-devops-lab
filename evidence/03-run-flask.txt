@@ -1,0 +1,14 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 03-run-flask
+Executed: 2026-11-19 11:35:15 -05:00
+
+PS> docker run -d --name week11-flask -p 4000:80 hellodocker
+32dac8035d67c0bc28e932066dab08f193446bf6b6caa8c1aaa733c3a74050d0
+PS> docker container ls --filter name=week11-flask
+NAMES          STATUS         PORTS
+week11-flask   Up 3 seconds   0.0.0.0:4000->80/tcp, [::]:4000->80/tcp
+PS> curl.exe --fail --silent --show-error http://localhost:4000
+<h3>Hello Felipe!</h3><b>Hostname:</b> 32dac8035d67
+<b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>
+
+
+Command sequence completed.

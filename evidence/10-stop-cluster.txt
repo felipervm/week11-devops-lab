@@ -1,0 +1,20 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 10-stop-cluster
+Executed: 2026-11-19 11:36:24 -05:00
+
+PS> minikube stop -p week11-lab
+* Stopping node "week11-lab"  ...
+* Powering off "week11-lab" via SSH ...
+* 1 node stopped.
+PS> minikube status -p week11-lab
+week11-lab
+type: Control Plane
+host: Stopped
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Stopped
+PS> kubectl config current-context
+docker-desktop
+PS> docker container ls --filter name=week11-flask
+NAMES     STATUS
+
+Command sequence completed.

@@ -1,0 +1,21 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 04-stop-flask
+Executed: 2026-11-19 11:36:13 -05:00
+
+PS> docker logs --tail 8 week11-flask
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://172.17.0.2:80
+Press CTRL+C to quit
+172.17.0.1 - - [19/Nov/2026 16:36:07] "GET / HTTP/1.1" 200 -
+PS> docker container stop week11-flask
+week11-flask
+PS> docker container ls --filter name=week11-flask
+NAMES     STATUS
+PS> docker container ls -a --filter name=week11-flask
+NAMES          STATUS
+week11-flask   Exited (137) Less than a second ago
+
+Command sequence completed.

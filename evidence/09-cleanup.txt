@@ -1,0 +1,13 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 09-cleanup
+Executed: 2026-11-19 11:33:18 -05:00
+
+PS> kubectl --context week11-lab delete -f nginx-deploy.yaml
+deployment.apps "nginx" deleted from default namespace
+PS> kubectl --context week11-lab delete -f nginx-service.yaml
+service "nginx-nodeport" deleted from default namespace
+PS> kubectl --context week11-lab get deployment,svc -l app=nginx
+No resources found in default namespace.
+PS> kubectl --context week11-lab get svc nginx-nodeport --ignore-not-found
+
+
+Command sequence completed.

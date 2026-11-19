@@ -1,0 +1,13 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 11-github
+Executed: 2026-11-19 11:39:09 -05:00
+
+PS> gh repo view felipervm/week11-devops-lab --json url,isFork
+{"isFork":true,"url":"https://github.com/felipervm/week11-devops-lab"}
+PS> git remote get-url origin
+https://github.com/felipervm/week11-devops-lab.git
+PS> git log -1 --oneline
+6af05d3 (HEAD -> main, origin/main) Complete Week 11 Docker and Kubernetes lab
+PS> git ls-remote origin refs/heads/main
+6af05d37643d9b78e1ed3f79e9553bdbee30ac05        refs/heads/main
+
+Command sequence completed.

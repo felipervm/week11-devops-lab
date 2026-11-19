@@ -1,0 +1,16 @@
+WEEK 11 CONTAINERIZATION LAB | Felipe Mattos | 07-kubernetes-verify
+Executed: 2026-11-19 11:32:04 -05:00
+
+PS> kubectl --context week11-lab get pods -l app=nginx -o wide
+NAME                    READY   STATUS    RESTARTS   AGE   IP           NODE         NOMINATED NODE   READINESS GATES
+nginx-f9b6859fb-9ltls   1/1     Running   0          31s   10.244.0.4   week11-lab   <none>           <none>
+nginx-f9b6859fb-fgcwm   1/1     Running   0          31s   10.244.0.3   week11-lab   <none>           <none>
+nginx-f9b6859fb-zwmg2   1/1     Running   0          31s   10.244.0.5   week11-lab   <none>           <none>
+PS> kubectl --context week11-lab get svc nginx-nodeport
+NAME             TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+nginx-nodeport   NodePort   10.104.129.122   <none>        80:30080/TCP   31s
+PS> kubectl --context week11-lab get deployment nginx
+NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+nginx   3/3     3            3           31s
+
+Command sequence completed.
